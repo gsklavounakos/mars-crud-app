@@ -12,6 +12,7 @@ However, the mission has strict compliance, reliability, and automation requirem
 2. Builds are automated and optimized
 
 🛠️ Mission Tasks
+
 🚦 Phase 1: Mission Repository Initialization
 
 Create a Git repository for your project (GitHub).
