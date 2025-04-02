@@ -13,11 +13,13 @@ However, the mission has strict compliance, reliability, and automation requirem
 
 🛠️ Mission Tasks
 🚦 Phase 1: Mission Repository Initialization
+
 Create a Git repository for your project (GitHub).
 Create and add a simple CRUD application that manages space station resource stock (e.g., product name, id, quantity ) using a relational or NoSQL database (preferably in-memory) and exposes the required REST endpoints.
 Supported stacks: Flask/Django, Node.js (Express), Java (Spring Boot), DBs: SQLite, H2, MongoDB etc.
 Ensure the application runs locally and document the setup in a README.md.
 Push the code to your repository.
+
 🚀 Phase 2: CI - Mission Safety Checks
 Goal: Ensure the mission code is always tested and reviewed before proceeding to the next phase.
 
