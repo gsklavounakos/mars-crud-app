@@ -14,7 +14,7 @@ def init_db():
     cursor = connection.cursor()
 
     # Create the "resources" table
-    cursor.execute("""
+    cursor.execute(""" 
         CREATE TABLE IF NOT EXISTS resources (
             id INTEGER PRIMARY KEY AUTOINCREMENT,
             name TEXT NOT NULL,
