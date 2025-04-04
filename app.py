@@ -33,7 +33,8 @@ def get_all_resources():
     cursor = conn.execute('SELECT * FROM resources')
     resources = cursor.fetchall()
     close_connection(conn)
-    return jsonify({"status": "success", "resources": [dict(row) for row in resources]})
+    resources_list = [dict(row) for row in resources]
+    return jsonify({"status": "success", "resources": resources_list})
 
 @app.route('/resources/<int:resource_id>', methods=['GET'])
 def get_resource_by_id(resource_id):
@@ -44,7 +45,7 @@ def get_resource_by_id(resource_id):
     close_connection(conn)
     if resource:
         return jsonify({"status": "success", "resource": dict(resource)})
-    return jsonify({"status": "error", "message": "Resource not found"}), 404  # Removed unnecessary 'else'
+    return jsonify({"status": "error", "message": "Resource not found"}), 404
 
 @app.route('/resources', methods=['POST'])
 def create_resource():
