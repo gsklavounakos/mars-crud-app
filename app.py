@@ -1,3 +1,8 @@
+"""
+Module for managing Mars resources through a Flask web application.
+Provides endpoints to get, create, update, and delete resources.
+"""
+
 import sqlite3
 from flask import Flask, request, jsonify
 
@@ -39,8 +44,7 @@ def get_resource_by_id(resource_id):
     close_connection(conn)
     if resource:
         return jsonify({"status": "success", "resource": dict(resource)})
-    else:
-        return jsonify({"status": "error", "message": "Resource not found"}), 404
+    return jsonify({"status": "error", "message": "Resource not found"}), 404  # Removed unnecessary 'else'
 
 @app.route('/resources', methods=['POST'])
 def create_resource():

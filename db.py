@@ -1,6 +1,15 @@
+"""
+Module for initializing the Mars Resources database.
+Creates the 'resources' table if it does not exist.
+"""
+
 import sqlite3
 
 def init_db():
+    """
+    Initializes the Mars Resources database by creating the 'resources' table
+    if it does not already exist.
+    """
     connection = sqlite3.connect("mars_resources.db")  # Creates the database file
     cursor = connection.cursor()
 
