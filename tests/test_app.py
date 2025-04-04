@@ -2,6 +2,8 @@ import pytest
 from app import app
 import sys
 import os
+
+# Ensure the app module can be found
 sys.path.insert(0, os.path.abspath(os.path.join(os.path.dirname(__file__), '..')))
 
 @pytest.fixture
